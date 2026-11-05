@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abishek S – Portfolio</title>
+<meta name="description" content="Portfolio of Abishek S, Computer Science and Engineering student: Java, Python, SQL and web development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F6FA;--ink:#151A2D;--mute:#5B6280;--rule:#D5D9EA;--hot:#FF5A5F;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1220;--ink:#E9ECF8;--mute:#9AA2C4;--rule:#262B44;--hot:#FF6B70;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0F1220;--ink:#E9ECF8;--mute:#9AA2C4;--rule:#262B44;--hot:#FF6B70;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:56rem;margin:0 auto;padding:0 1.25rem}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--hot);text-decoration-thickness:2px;text-underline-offset:.2em}
+a:hover{text-decoration-color:currentColor}
+a:focus-visible{outline:3px solid var(--hot);outline-offset:3px;border-radius:2px}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;padding:1.25rem 0}
+header strong{font:800 1.1rem "Bricolage Grotesque",Figtree,system-ui,sans-serif;letter-spacing:-.01em}
+nav{display:flex;gap:1.1rem;flex-wrap:wrap;font-weight:500}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--hot)}
+.hero{padding:clamp(2.5rem,9vw,6rem) 0 1rem}
+h1{margin:0;font:800 clamp(3.4rem,15vw,9.5rem)/.9 "Bricolage Grotesque",Figtree,system-ui,sans-serif;letter-spacing:-.045em}
+.lede{margin:2rem 0 0;max-width:24em;font:600 clamp(1.45rem,4.2vw,2.35rem)/1.4 "Bricolage Grotesque",Figtree,system-ui,sans-serif;letter-spacing:-.015em}
+.a{--c:color-mix(in srgb,var(--hot) calc(var(--w) * 70%),transparent);
+  background:linear-gradient(var(--c),var(--c)) no-repeat 0 100%/0 100%;
+  padding:.02em .14em;margin:0 -.14em;border-radius:.15em;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:sweep .8s ease-out forwards;animation-delay:var(--d)}
+@keyframes sweep{to{background-size:100% 100%}}
+.note{margin:1.5rem 0 0;max-width:34rem;color:var(--mute)}
+section{padding-top:clamp(3.5rem,9vw,6rem)}
+h2{margin:0 0 1.25rem;font:800 clamp(1.8rem,5vw,2.4rem)/1.1 "Bricolage Grotesque",Figtree,system-ui,sans-serif;letter-spacing:-.025em}
+p{margin:0 0 1rem;max-width:38rem}
+.big{font:600 clamp(1.5rem,4.5vw,2.2rem)/1.3 "Bricolage Grotesque",Figtree,system-ui,sans-serif;letter-spacing:-.015em;margin:0 0 .8rem;max-width:30em}
+.mute{color:var(--mute)}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:flex;justify-content:space-between;gap:.25rem 1.5rem;flex-wrap:wrap;border-top:2px solid var(--rule);padding:.9rem 0 1rem}
+.rows b{font-weight:600}
+.rows small{display:block;color:var(--mute);font-size:.95rem}
+.when{color:var(--mute);white-space:nowrap}
+.projects{list-style:none;margin:0;padding:0}
+.projects li{border-top:2px solid var(--rule);padding:1.2rem 0 1.5rem}
+.projects h3{margin:0 0 .4rem;font:700 1.35rem/1.2 "Bricolage Grotesque",Figtree,system-ui,sans-serif;letter-spacing:-.01em}
+.projects p{margin:0 0 .5rem}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:2rem}
+.two h3{margin:0 0 .4rem;font:700 1.15rem/1.2 "Bricolage Grotesque",Figtree,system-ui,sans-serif}
+.two p{margin:0}
+.links{display:flex;gap:1.5rem;flex-wrap:wrap;font-weight:600;font-size:1.15rem;margin-top:1rem}
+footer{margin-top:clamp(4rem,10vw,7rem);padding:1.5rem 0 2rem;border-top:2px solid var(--rule);color:var(--mute);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .a{animation:none;background-size:100% 100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <strong>Abishek S</strong>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Abishek S</h1>
+      <p class="lede">I build <span class="a" style="--w:.55;--d:.5s">smart</span>, <span class="a" style="--w:1;--d:.9s">user-friendly</span> software and love <span class="a" style="--w:.7;--d:1.3s">learning</span> what comes next.</p>
+      <p class="note">B.E. Computer Science and Engineering student at Hindusthan College of Engineering and Technology, Coimbatore.</p>
+    </div>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I’m a creative thinker and an aspiring Computer Science engineer who enjoys building digital solutions that are smart and easy to use. I work with HTML, CSS, JavaScript, Java, Python and MySQL, and I’m most interested in software development, web technologies and innovation.</p>
+      <p>I like learning emerging technologies and using them to solve real-world problems. Away from the keyboard, I play chess, draw and play online games.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p class="big">Java, Python, SQL, HTML and CSS</p>
+      <p class="mute">Also: communication, teamwork and adaptive learning.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <h3>Barber Shop Management System</h3>
+          <p>A management system with customer handling, appointment booking, billing and employee management, built with a responsive, user-friendly front end.</p>
+          <p class="mute">Built with HTML, CSS, Java, Python and MySQL.</p>
+        </li>
+        <li>
+          <h3>AI-Based Food Monitoring System</h3>
+          <p>An AI-based system for food quality monitoring, wastage detection and data analysis to make food management more efficient, with an interactive, responsive front end.</p>
+          <p class="mute">Built with HTML, CSS, Python and MySQL.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Internships and achievements</h2>
+      <ul class="rows">
+        <li><span><b>Emglitz Technologies</b><small>Web development internship</small></span><span class="when">Jan 2025</span></li>
+        <li><span><b>National Conference on AIML and Computing Powers</b></span><span class="when">Oct 2025</span></li>
+        <li><span><b>NPTEL</b><small>Cloud Computing</small></span><span class="when">Jan 2025</span></li>
+        <li><span><b>NPTEL</b><small>Cyber Security and Privacy</small></span><span class="when">Jul 2025</span></li>
+        <li><span><b>BYTS India</b><small>Java programming course</small></span><span class="when">Jun 2026</span></li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="rows">
+        <li><span><b>B.E. Computer Science and Engineering</b><small>Hindusthan College of Engineering and Technology, Coimbatore</small><small>CGPA 8.89 (up to 5th semester)</small></span><span class="when">2023–2027</span></li>
+        <li><span><b>Class XII (HSC), CBSE</b><small>Chinmaya Vidyalaya, Tattamangalam</small><small>78.6%</small></span><span class="when">2022–2023</span></li>
+        <li><span><b>Class X (SSLC), CBSE</b><small>Chinmaya Vidyalaya, Tattamangalam</small><small>83.0%</small></span><span class="when">2020–2021</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="two">
+        <div><h3>Languages</h3><p>English, Malayalam and Tamil</p></div>
+        <div><h3>Interests</h3><p>Coding, online gaming, chess, drawing and art</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Have a project or an opportunity in mind? I’m based in Palakkad, Kerala. Get in touch.</p>
+      <div class="links">
+        <a href="mailto:abisheks0010@gmail.com">abisheks0010@gmail.com</a>
+        <a href="tel:+916235576962">+91 62355 76962</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Abishek S</footer>
+</div>
+</body>
+</html>
